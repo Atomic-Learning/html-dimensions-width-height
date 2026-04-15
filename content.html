@@ -10,9 +10,23 @@
 
 <img src="resources/base_image.png" alt="A simple image of a grid with 2 rows and 3 columns">
 
+<h2>Specifying Width and Height</h2>
+
+<p>When both <code>width</code> and <code>height</code> attributes are specified, the element will be displayed at the exact dimensions specified, regardless of its original aspect ratio:</p>
+
+<code class="language-html">&lt;img src="resources/base_image.png" alt="Base Image" width="400" height="400"&gt;</code>
+
+<p>produces:</p>
+
+<img src="resources/base_image.png" alt="Base Image" width="400" height="400">
+
+<p>Note that in this case, for an image, the image is deformed to fit the specified dimensions, which may distort the image if the aspect ratio is not maintained.</p>
+
+<p>Specifying both <code>width</code> and <code>height</code> is good practice even when you do not intend to resize the image, because it allows the browser to reserve the correct amount of space in the page layout before the image has finished loading. Without these attributes, the page may reflow and shift when the image loads.</p>
+
 <h2>Specifying Width or Height</h2>
 
-<p>If we specify the width of an element using width or height alone, the other dimension will be adjusted proportionally to maintain the aspect ratio:</p>
+<p>If we specify only one dimension (<code>width</code> or <code>height</code>), the result depends on the element type. For elements with intrinsic dimensions (such as <code>&lt;img&gt;</code> and <code>&lt;video&gt;</code>), the other dimension is adjusted proportionally to maintain aspect ratio:</p>
 
 <code class="language-html">&lt;img src="resources/base_image.png" alt="Base Image" width="600"&gt;</code>
 
@@ -28,18 +42,6 @@
 
 <img src="resources/base_image.png" alt="Base Image" height="75">
 
+<p>For elements without intrinsic media dimensions (for example <code>&lt;iframe&gt;</code>), specifying only one attribute does not automatically scale the other dimension proportionally, so providing both values is usually clearer.</p>
+
 <p>The values for <code>width</code> and <code>height</code> are unitless integers, always interpreted as pixels.</p>
-
-<h2>Specifying Width and Height</h2>
-
-<p>When both <code>width</code> and <code>height</code> attributes are specified, the element will be displayed at the exact dimensions specified, regardless of its original aspect ratio:</p>
-
-<code class="language-html">&lt;img src="resources/base_image.png" alt="Base Image" width="400" height="400"&gt;</code>
-
-<p>produces:</p>
-
-<img src="resources/base_image.png" alt="Base Image" width="400" height="400">
-
-<p>Note that in this case, the image is deformed to fit the specified dimensions, which may distort the image if the aspect ratio is not maintained.</p>
-
-<p>Specifying both <code>width</code> and <code>height</code> is good practice even when you do not intend to resize the image, because it allows the browser to reserve the correct amount of space in the page layout before the image has finished loading. Without these attributes, the page may reflow and shift when the image loads.</p>

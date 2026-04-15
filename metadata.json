@@ -1,22 +1,17 @@
 {
-    "title": "",
-    "slug": "",
-    "description": "",
+    "title": "HTML: Setting Dimensions with Width and Height Attributes",
+    "slug": "html-dimensions-width-height",
+    "description": "Describes how to specify the dimensions of an element in HTML using the width and height attributes.",
     "authors": [
-        "",
-        ""
+        "chris-cooling"
     ],
     "tags": [
-        "",
-        ""
+        "html"
     ],
-    "duration": 0,
+    "duration": 3,
     "prerequisites": [
-        "",
-        ""
+        "html-images-with-img"
     ],
     "related": [
-        "",
-        ""
     ]
 }

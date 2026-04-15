@@ -1,1 +1,45 @@
+<p>Many HTML elements can have their dimensions specified using the <code>width</code> and <code>height</code> attributes, including:</p>
+<ul>
+  <li><code>&lt;img&gt;</code></li>
+  <li><code>&lt;iframe&gt;</code></li>
+  <li><code>&lt;object&gt;</code></li>
+  <li><code>&lt;video&gt;</code></li>
+</ul>
 
+<p>For the examples on this page, we will use the <code>&lt;img&gt;</code> element as an example. The base image we will be using 150 pixels in width and 100 pixels in height, split into a 2x3 grid:</p>
+
+<img src="resources/base_image.png" alt="A simple image of a grid with 2 rows and 3 columns">
+
+<h2>Specifying Width or Height</h2>
+
+<p>If we specify the width of an element using width or height alone, the other dimension will be adjusted proportionally to maintain the aspect ratio:</p>
+
+<code class="language-html">&lt;img src="resources/base_image.png" alt="Base Image" width="600"&gt;</code>
+
+produces:
+
+<img src="resources/base_image.png" alt="Base Image" width="600">
+
+<p>and:</p>
+
+<code class="language-html">&lt;img src="resources/base_image.png" alt="Base Image" height="75"&gt;</code>
+
+<p>produces:</p>
+
+<img src="resources/base_image.png" alt="Base Image" height="75">
+
+<p>The values for <code>width</code> and <code>height</code> are unitless integers, always interpreted as pixels.</p>
+
+<h2>Specifying Width and Height</h2>
+
+<p>When both <code>width</code> and <code>height</code> attributes are specified, the element will be displayed at the exact dimensions specified, regardless of its original aspect ratio:</p>
+
+<code class="language-html">&lt;img src="resources/base_image.png" alt="Base Image" width="400" height="400"&gt;</code>
+
+<p>produces:</p>
+
+<img src="resources/base_image.png" alt="Base Image" width="400" height="400">
+
+<p>Note that in this case, the image is deformed to fit the specified dimensions, which may distort the image if the aspect ratio is not maintained.</p>
+
+<p>Specifying both <code>width</code> and <code>height</code> is good practice even when you do not intend to resize the image, because it allows the browser to reserve the correct amount of space in the page layout before the image has finished loading. Without these attributes, the page may reflow and shift when the image loads.</p>

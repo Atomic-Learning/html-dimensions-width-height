@@ -26,7 +26,7 @@
 
 <h2>Specifying Width or Height</h2>
 
-<p>If we specify only one dimension (<code>width</code> or <code>height</code>), the result depends on the element type. For elements with intrinsic dimensions (such as <code>&lt;img&gt;</code> and <code>&lt;video&gt;</code>), the other dimension is adjusted proportionally to maintain aspect ratio:</p>
+<p>If we specify only one dimension (<code>width</code> or <code>height</code>), the result depends on the element type. For elements with intrinsic dimensions (such as <code class="language-html">&lt;img&gt;</code> and <code class="language-html">&lt;video&gt;</code>), the other dimension is adjusted proportionally to maintain aspect ratio:</p>
 
 <code class="language-html">&lt;img src="resources/base_image.png" alt="Base Image" width="600"&gt;</code>
 
@@ -42,6 +42,6 @@
 
 <img src="resources/base_image.png" alt="Base Image" height="75">
 
-<p>For elements without intrinsic media dimensions (for example <code>&lt;iframe&gt;</code>), specifying only one attribute does not automatically scale the other dimension proportionally, so providing both values is usually clearer.</p>
+<p>For elements without intrinsic media dimensions (for example <code class="language-html">&lt;iframe&gt;</code>), specifying only one attribute does not automatically scale the other dimension proportionally, so providing both values is usually clearer.</p>
 
 <p>The values for <code>width</code> and <code>height</code> are unitless integers, always interpreted as pixels.</p>

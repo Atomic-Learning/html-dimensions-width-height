@@ -19,7 +19,7 @@ When both `width` and `height` attributes are specified, the element will be dis
 
 produces:
 
-![Base Image](resources/base_image.png)
+<img src="resources/base_image.png" alt="Base Image" width="400" height="400">
 
 The values for `width` and `height` are unitless integers, always interpreted as pixels.
 
@@ -31,20 +31,22 @@ Specifying both `width` and `height` is good practice even when you do not inten
 
 If we specify only one dimension (`width` or `height`), the result depends on the element type. For elements with intrinsic dimensions (such as `<img>`{.html} and `<video>`{.html}), the other dimension is adjusted proportionally to maintain aspect ratio:
 
-`<img src="resources/base_image.png" alt="Base Image" width="600">`{.html}
-
-produces:
-
-![Base Image](resources/base_image.png)
-
-and:
-
 ```html
-<img src="resources/base_image.png" alt="Base Image" height="75">
+<img src="resources/base_image.png" alt="Base Image" width="600">
 ```
 
 produces:
 
-![Base Image](resources/base_image.png)
+<img src="resources/base_image.png" alt="Base Image" width="600">
+
+and:
+
+```html
+  <img src="resources/base_image.png" alt="Base Image" height="75">
+```
+
+produces:
+
+<img src="resources/base_image.png" alt="Base Image" height="75">
 
 For elements without intrinsic media dimensions (for example `<iframe>`{.html}), specifying only one attribute does not automatically scale the other dimension proportionally, so providing both values is usually clearer.
